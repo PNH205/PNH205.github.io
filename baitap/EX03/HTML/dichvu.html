@@ -1,65 +1,88 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Học Làm Web | Dịch vụ</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Học Làm Web</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="trangchu.html">Trang chủ</a></li>
-                    <li><a href="thongtin.html">Thông tin</a></li>
-                    <li class="current"><a href="dichvu.html">Dịch vụ</a></li>
-                </ul>
-            </nav>
+<html>
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+     <meta name="description" content="Thiet ke web chuyen nghiep">
+     <meta name="keywords" content="web design, professional web design, thiet ke web, thiet ke web chuyen nghiep">
+     <meta name="author" content="Ngoc Hieu">
+     <title>Ngoc Hieu Web Design | Dịch vụ</title>
+     <link rel="stylesheet" href="../CSS/style.css">
+  </head>
+  <body>
+   <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Ngoc Hieu</span> Web Design</h1>
         </div>
+        <nav>
+          <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="thongtin.html">Thông tin</a></li>
+            <li class="current"><a href="dichvu.html">Dịch vụ</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section id="newsletter">
-        <div class="container">
-            <h1>Đăng ký để nhận tài liệu học miễn phí</h1>
-            <form>
-                <input type="email" placeholder="Nhập Email...">
-                <button type="submit" class="button_1">Đăng ký</button>
-            </form>
-        </div>
+   <section id="newsletter">
+      <div class="container">
+        <h1>Đăng ký để nhận thông báo mới từ chúng tôi</h1>
+        <form>
+          <input type="email" placeholder="Nhập Email...">
+          <button type="submit" class="button_1">Đăng ký</button>
+        </form>
+      </div>
     </section>
 
     <section id="main">
-        <div class="container">
-            <article id="main-col">
-                <h1 class="page-title">Khóa học của chúng tôi</h1>
-                <ul id="services">
-                    <li>
-                        <h3>Khóa học Front-end cơ bản</h3>
-                        <p>Khóa học giúp bạn nắm vững HTML5, CSS3 và JavaScript cơ bản để xây dựng giao diện web đẹp mắt và tương tác với người dùng.</p>
-                        <p>Thời gian: 8 tuần | Học phí: 2.500.000 VNĐ</p>
-                    </li>
-                    <li>
-                        <h3>Khóa học Back-end với Node.js</h3>
-                        <p>Học cách xây dựng máy chủ web với Node.js, Express và MongoDB. Khóa học giúp bạn phát triển API và ứng dụng web đầy đủ.</p>
-                        <p>Thời gian: 10 tuần | Học phí: 3.500.000 VNĐ</p>
-                    </li>
-                    <li>
-                        <h3>Khóa học Full-stack Developer</h3>
-                        <p>Khóa học toàn diện giúp bạn trở thành lập trình viên Full-stack với kiến thức về cả Front-end và Back-end. Bạn sẽ xây dựng nhiều dự án thực tế trong khóa học này.</p>
-                        <p>Thời gian: 16 tuần | Học phí: 5.500.000 VNĐ</p>
-                    </li>
-                </ul>
-            </article>
-        </div>
+      <div class="container">
+        <article id="main-col">
+          <h1 class="page-title">Các dịch vụ</h1>
+          <ul id="services">
+            <li>
+              <h3>Thiết kế Website</h3>
+              <p>Tạo website chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
+	<p>Giá: $1,000 - $3,000</p>
+            </li>
+            <li>
+              <h3>Bảo trì Website</h3>
+              <p>Bảo trì website chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
+						  <p>Giá: $250 mỗi tháng</p>
+            </li>
+            <li>
+              <h3>Web Hosting</h3>
+              <p>Cung cấp hosting chuyên nghiệp, giá cả phải chăng cho cá nhân, công ty, doanh nghiệp hoặc tổ chức.</p>
+						  <p>Giá: $25 mỗi tháng</p>
+            </li>
+          </ul>
+        </article>
+
+        <aside id="sidebar">
+          <div class="dark">
+            <h3>Liên hệ</h3>
+            <form class="quote">
+  						<div>
+  							<label>Tên</label><br>
+  							<input type="text" placeholder="Tên">
+  						</div>
+  						<div>
+  							<label>Email</label><br>
+  							<input type="email" placeholder="Email">
+  						</div>
+  						<div>
+  							<label>Nội dung</label><br>
+  							<textarea placeholder="Nội dung"></textarea>
+  						</div>
+  						<button class="button_1" type="submit">Gửi</button>
+					</form>
+          </div>
+        </aside>
+      </div>
     </section>
 
     <footer>
-        <p>Học Làm Web, Copyright &copy; 2025</p>
+      <p>Ngoc Hieu Web Deisgn, Copyright &copy; 2025</p>
     </footer>
-</body>
+  </body>
 </html>
-
