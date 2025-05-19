@@ -1,80 +1,92 @@
-body{
- 
-
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Global */
-.container{
-  
-
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-ul{
-  
-
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-/* Header **/
-header{
-  
-
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    overflow: hidden;
+    border-bottom: 3px solid #e67e22;
 }
 
-header a{
-  
-
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-header li{
-  
-
+header li {
+    display: inline-block;
+    margin-left: 20px;
 }
 
-header #branding{
-  
-
+header #branding {
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: #e67e22;
 }
 
-header #branding h1{
-  
-
+header #branding h1 {
+    margin: 0;
 }
 
-header nav{
-  
-
+header nav {
+    float: right;
+    margin-top: 5px;
 }
 
-header .highlight, header .current a{
-  
-
+header .highlight, header .current a {
+    color: #e67e22;
 }
 
-header a:hover{
-  
-
+header a:hover {
+    color: #e67e22;
 }
 
 /* Showcase */
-#showcase{
-  
-
+#showcase {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-#showcase h1{
-  
-
+#showcase h1 {
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-#showcase p{
-  
+#showcase p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
 }
 
-
-footer{
-  
-
+/* Footer */
+footer {
+    background-color: #e67e22;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+    font-size: 14px;
 }
-
