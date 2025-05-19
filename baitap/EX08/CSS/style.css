@@ -86,7 +86,7 @@ nav ul li a:hover {
 
 /* Showcase */
 #showcase {
-    background: url('../images/showcase.jpg') no-repeat center center;
+    background: url('../img/showcase.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     padding: 80px 20px;
