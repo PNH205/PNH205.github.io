@@ -132,23 +132,29 @@ header a:hover{
 /* Boxes */
 #boxes{
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 #boxes .box{
-  float: left;
-  width: 30%;
+  flex: 1;
   padding: 10px;
   text-align: center;
-  margin: 1.66%;
+  margin: 0 10px;
   background: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #boxes .box img{
   width: 90px;
   height: 90px;
   border-radius: 50%;
+  margin: 0 auto 15px auto;
 }
 
 /* Sidebar */
