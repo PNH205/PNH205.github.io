@@ -57,8 +57,30 @@ body {
   transition: transform 0.3s ease;
 }
 
+.profile-avatar {
+    /* Kích thước cố định cho avatar */
+    width: 150px;  /* hoặc kích thước bạn muốn */
+    height: 150px;
+    
+    /* Bo tròn ảnh thành hình tròn */
+    border-radius: 50%;
+    
+    /* Đảm bảo ảnh không bị méo */
+    object-fit: cover;
+    
+    /* Thêm viền */
+    border: 3px solid #ffffff;
+    
+    /* Thêm bóng đổ nhẹ */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    
+    /* Hiệu ứng hover mượt mà */
+    transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột qua */
 .profile-avatar:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .profile-name {
