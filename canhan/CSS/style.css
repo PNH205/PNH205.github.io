@@ -69,6 +69,19 @@ body {
 .profile-avatar:hover {
     transform: scale(1.05);
 }
+.profile-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    /* Thêm background tạm thời để kiểm tra kích thước */
+    background: #f0f0f0;
+    
+    /* Thêm border để thấy rõ vùng chứa */
+    border: 2px solid red;
+}
+
 
 .profile-name {
   font-size: 1.8em;
