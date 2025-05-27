@@ -101,26 +101,38 @@ header a:hover {
 /* Showcase */
 #showcase {
   min-height: 400px;
-  background: url('../img/showcase.jpg') no-repeat center center;
+  position: relative;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   padding-top: 100px;
-  background-size: cover; /* Phủ kín */
+  background: url('../img/showcase.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 0 0 18px 18px;
+  overflow: hidden;
 }
-
+#showcase::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  /* Overlay xanh dương-vàng gradient */
+  background: linear-gradient(120deg, rgba(30,144,255,0.72) 55%, rgba(255,215,0,0.38) 100%);
+  z-index: 1;
+}
+#showcase .container {
+  position: relative;
+  z-index: 2;
+}
 #showcase h1 {
   font-size: 55px;
   margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
-  animation: fadeIn 1s ease; /* Hiệu ứng fade in */
+  text-shadow: 2px 2px 8px rgba(30, 144, 255, 0.34), 0 2px 12px rgba(0,0,0,0.2);
+  animation: fadeIn 1s ease;
 }
-
 #showcase p {
   font-size: 20px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
-  animation: fadeIn 1.5s ease; /* Hiệu ứng fade in */
+  text-shadow: 1px 1px 5px rgba(30, 144, 255, 0.25), 0 2px 8px rgba(0,0,0,0.15);
+  animation: fadeIn 1.5s ease;
 }
-
 @keyframes fadeIn {
   0% {
     opacity: 0;
