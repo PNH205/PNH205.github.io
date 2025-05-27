@@ -70,6 +70,22 @@ body {
     transform: scale(1.05);
 }
 
+.profile-header {
+  text-align: center; /* Căn giữa nội dung */
+  margin-bottom: 40px;
+}
+
+.profile-avatar {
+  display: inline-block; /* Đảm bảo avatar được căn giữa */
+  margin: 0 auto; /* Tạo khoảng cách tự động để căn giữa */
+  width: 150px;  /* Kích thước avatar */
+  height: 150px; /* Kích thước avatar */
+  border-radius: 50%; /* Bo tròn ảnh thành hình tròn */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  border: 3px solid #ffffff; /* Thêm viền */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Thêm bóng đổ nhẹ */
+  transition: transform 0.3s ease; /* Hiệu ứng hover mượt mà */
+}
 
 .profile-name {
   font-size: 1.8em;
