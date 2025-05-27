@@ -1,17 +1,20 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
+    background: #f9eeee;
+    color: #2d3748;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Global */
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    flex: 1;
 }
 
 ul {
@@ -20,12 +23,12 @@ ul {
     margin: 0;
 }
 
-/* Header **/
 header {
-    background: #35424a;
+    background: #c53030;
     color: #fff;
     padding: 20px 0;
-    border-bottom: #e8491d 4px solid;
+    border-bottom: #e53e3e 4px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header a {
@@ -33,7 +36,7 @@ header a {
     text-decoration: none;
     font-weight: bold;
     padding: 5px 10px;
-    transition: background 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
     border-radius: 4px;
 }
 
@@ -58,15 +61,14 @@ header nav {
 
 header .highlight,
 header .current a {
-    color: #e8491d;
+    color: #e53e3e;
 }
 
 header a:hover {
-    background: #e8491d;
+    background: #e53e3e;
     color: #fff;
 }
 
-/* Showcase */
 #showcase {
     min-height: 300px;
     background: url('../img/showcase.jpg') no-repeat center center/cover;
@@ -86,13 +88,13 @@ header a:hover {
     font-size: 1.3rem;
 }
 
-/* Footer */
 footer {
-    background: #35424a;
+    background: #c53030;
     color: #fff;
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
-    border-top: #e8491d 4px solid;
+    border-top: #e53e3e 4px solid;
     font-size: 1rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
