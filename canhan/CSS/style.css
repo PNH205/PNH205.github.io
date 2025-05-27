@@ -161,10 +161,9 @@ body {
 }
 
 /* Contact Info */
-.contact-info {
-  margin: 30px 0;
+.contact-info i, .contact-info span {
+    color: #fff;
 }
-
 .contact-item {
   display: flex;
   align-items: center;
