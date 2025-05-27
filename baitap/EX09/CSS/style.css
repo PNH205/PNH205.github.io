@@ -24,6 +24,8 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   color: #ffffff;
+  border-radius: 5px; /* Bo góc nút */
+  transition: background 0.3s ease; /* Hiệu ứng hover */
 }
 
 .button_1:hover {
@@ -37,6 +39,7 @@ ul {
   color: #ffffff;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-radius: 5px; /* Bo góc */
 }
 
 /* Header */
@@ -46,6 +49,7 @@ header {
   padding-top: 30px;
   min-height: 70px;
   border-bottom: #ffd700 3px solid; /* Vàng */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 header a {
@@ -53,6 +57,7 @@ header a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
+  transition: color 0.3s ease; /* Hiệu ứng hover */
 }
 
 header li {
@@ -91,16 +96,19 @@ header a:hover {
   background: url('../img/showcase.jpg') no-repeat 0 -400px;
   text-align: center;
   color: #ffffff;
+  padding-top: 100px;
+  background-size: cover; /* Phủ kín */
 }
 
 #showcase h1 {
-  margin-top: 100px;
   font-size: 55px;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
 }
 
 #showcase p {
   font-size: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
 }
 
 /* Newsletter */
@@ -108,6 +116,7 @@ header a:hover {
   padding: 15px;
   color: #ffffff;
   background: #1e90ff; /* Xanh dương */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 #newsletter h1 {
@@ -123,18 +132,27 @@ header a:hover {
   padding: 4px;
   height: 25px;
   width: 250px;
+  border-radius: 5px; /* Bo góc */
 }
 
 /* Boxes */
 #boxes {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #boxes .box {
-  float: left;
-  text-align: center;
   width: 30%;
-  padding: 10px;
+  padding: 20px;
+  background-color: #f1f1f1; /* Xám nhạt */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
+  transition: transform 0.3s ease; /* Hiệu ứng hover */
+}
+
+#boxes .box:hover {
+  transform: translateY(-5px); /* Nâng lên khi hover */
 }
 
 #boxes .box img {
@@ -152,12 +170,24 @@ aside#sidebar .quote input,
 aside#sidebar .quote textarea {
   width: 90%;
   padding: 5px;
+  border-radius: 5px; /* Bo góc */
 }
 
-
+/* Main-col */
 article#main-col {
   float: left;
   width: 65%;
+}
+
+/* Services */
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #cccccc solid 1px;
+  margin-bottom: 5px;
+  background: #f1f1f1; /* Xám nhạt */
+  border-radius: 5px; /* Bo góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 footer {
@@ -166,4 +196,5 @@ footer {
   color: #ffffff;
   background-color: #ffd700; /* Vàng */
   text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Bóng trên */
 }
