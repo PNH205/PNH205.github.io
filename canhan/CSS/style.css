@@ -13,7 +13,7 @@ body {
   color: #07090c;
   line-height: 1.6;
 }
-ul {
+ul.contact-info {
     list-style: none;
 }
 .contact-info li {
@@ -26,14 +26,13 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
- fixed;
-  top: 20px;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  min-height: calc(100vh - 80px);
 }
 
-.profile-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
+/* Sidebar Styles */
 .sidebar {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
@@ -41,10 +40,15 @@ ul {
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   height: fit-content;
-  position: fixed;
-
+  position: sticky;
   top: 20px;
 }
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 
 
 .profile-avatar {
@@ -225,6 +229,12 @@ ul {
 .content-subtitle {
   color: #4a5568;
   font-size: 1.1em;
+}
+
+/* Intro Content Styles */
+.intro-content {
+  max-width: 800px;
+  margin: 30px 0;
 }
 
 .intro-text {
@@ -456,13 +466,3 @@ body {
   flex-direction: column;
 }
 
-/* Footer Styles */
-footer {
-    background-color:  #667eea;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 40px;
-    font-size: 14px;
-    border-radius: 0 0 5px 5px;
-}
