@@ -13,7 +13,12 @@ body {
   color: #07090c;
   line-height: 1.6;
 }
-
+ul.contact-info {
+    list-style: none;
+}
+.contact-info li {
+    color: #fff;
+}
 /* Container Layout */
 .container {
   max-width: 1200px;
