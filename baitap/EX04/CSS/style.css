@@ -2,21 +2,28 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f0f9ff; 
+    color: #2d3748; 
+    line-height: 1.6;
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
 }
 
 header {
-    background-color: #2c3e50;
+    background-color: #38b2ac; 
     color: white;
     padding: 10px 20px;
     overflow: hidden;
-    border-bottom: 3px solid #e8491d;
+    border-bottom: 3px solid #4fd1c5; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #branding {
     float: left;
     font-weight: bold;
     font-size: 20px;
-    color: #e8491d;
+    color: #4fd1c5; 
 }
 
 #branding span {
@@ -45,21 +52,24 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
+    transition: color 0.3s ease; 
 }
 
 nav ul li a:hover,
 nav ul li.current a {
-    color: #e8491d;
+    color: #4fd1c5; 
 }
 
 .container {
     max-width: 960px;
     margin: 20px auto;
     padding: 0 20px;
+    flex: 1; 
 }
 
 h1, h2 {
     font-weight: bold;
+    color: #2d3748; 
 }
 
 form input[type="email"] {
@@ -68,6 +78,14 @@ form input[type="email"] {
     font-size: 14px;
     margin-top: 10px;
     box-sizing: border-box;
+    border: 1px solid #cbd5e0; 
+    border-radius: 4px; 
+    transition: border-color 0.3s ease; 
+}
+
+form input[type="email"]:focus {
+    outline: none;
+    border-color: #4fd1c5; 
 }
 
 form button {
@@ -75,13 +93,23 @@ form button {
     padding: 5px 15px;
     font-size: 14px;
     cursor: pointer;
+    background-color: #38b2ac; 
+    color: white;
+    border: none;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4fd1c5; 
 }
 
 footer {
-    background-color: #e8491d;
+    background-color: #38b2ac; 
     color: white;
     text-align: center;
     padding: 10px 0;
     margin-top: 30px;
     font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
 }
