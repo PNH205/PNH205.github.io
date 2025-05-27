@@ -26,21 +26,7 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 30px;
-  min-height: calc(100vh - 80px);
-}
-
-/* Sidebar Styles */
-.sidebar {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 40px 30px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  height: fit-content;
-  position: sticky;
+ fixed;
   top: 20px;
 }
 
