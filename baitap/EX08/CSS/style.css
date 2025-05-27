@@ -21,6 +21,7 @@ ul {
 list-style: none;
 }
 
+
 .button_1 {
 display: inline-block;
 height: 38px;
@@ -32,10 +33,13 @@ color: #1e90ff;
 font-weight: bold;
 border-radius: 5px;
 cursor: pointer;
+transition: background-color 0.3s ease;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .button_1:hover {
 background: #ffb90f;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -45,6 +49,10 @@ color: white;
 padding: 10px 0;
 border-bottom: 3px solid #ffd700;
 overflow: hidden;
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header .container {
@@ -75,6 +83,7 @@ color: white;
 text-decoration: none;
 font-size: 14px;
 font-weight: bold;
+transition: color 0.3s ease;
 }
 
 nav ul li.current a,
@@ -91,6 +100,19 @@ padding: 80px 20px;
 text-align: center;
 border-radius: 5px;
 margin-top: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+animation: showcase-fade 1s ease-in-out;
+}
+
+@keyframes showcase-fade {
+0% {
+opacity: 0;
+transform: translateY(20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
 #showcase h1 {
@@ -114,6 +136,7 @@ padding: 30px 20px;
 margin-top: 30px;
 text-align: center;
 border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #newsletter h1 {
@@ -126,6 +149,7 @@ width: 250px;
 border: none;
 border-radius: 3px;
 margin-right: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #newsletter form input[type="submit"] {
@@ -135,10 +159,13 @@ background: #ffd700;
 color: #1e90ff;
 border-radius: 3px;
 cursor: pointer;
+transition: background-color 0.3s ease;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #newsletter form input[type="submit"]:hover {
 background: #ffb90f;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -149,4 +176,5 @@ padding: 15px 0;
 margin-top: 40px;
 font-size: 14px;
 border-radius: 0 0 5px 5px;
+box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
