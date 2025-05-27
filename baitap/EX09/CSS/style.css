@@ -25,12 +25,13 @@ ul {
   padding-right: 20px;
   color: #ffffff;
   border-radius: 5px; /* Bo góc nút */
-  transition: background 0.3s ease; /* Hiệu ứng hover */
+  transition: background 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
 }
 
 .button_1:hover {
   background: #ffd700; /* Vàng */
   color: #35424a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Bóng khi hover */
 }
 
 .dark {
@@ -40,6 +41,7 @@ ul {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px; /* Bo góc */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 /* Header */
@@ -50,6 +52,9 @@ header {
   min-height: 70px;
   border-bottom: #ffd700 3px solid; /* Vàng */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
+  position: sticky;
+  top: 0;
+  z-index: 1; /* Đưa lên trên */
 }
 
 header a {
@@ -57,7 +62,7 @@ header a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  transition: color 0.3s ease; /* Hiệu ứng hover */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Hiệu ứng hover */
 }
 
 header li {
@@ -72,6 +77,7 @@ header #branding {
 
 header #branding h1 {
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ */
 }
 
 header nav {
@@ -83,17 +89,19 @@ header .highlight,
 header .current a {
   color: #ffd700; /* Vàng */
   font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
 }
 
 header a:hover {
   color: #cccccc;
   font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
 }
 
 /* Showcase */
 #showcase {
   min-height: 400px;
-  background: url('../img/showcase.jpg') no-repeat 0 -400px;
+  background: url('../img/showcase.jpg') no-repeat center center;
   text-align: center;
   color: #ffffff;
   padding-top: 100px;
@@ -104,11 +112,24 @@ header a:hover {
   font-size: 55px;
   margin-bottom: 10px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
+  animation: fadeIn 1s ease; /* Hiệu ứng fade in */
 }
 
 #showcase p {
   font-size: 20px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Bóng chữ */
+  animation: fadeIn 1.5s ease; /* Hiệu ứng fade in */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Newsletter */
@@ -121,6 +142,7 @@ header a:hover {
 
 #newsletter h1 {
   float: left;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Bóng chữ */
 }
 
 #newsletter form {
@@ -133,6 +155,8 @@ header a:hover {
   height: 25px;
   width: 250px;
   border-radius: 5px; /* Bo góc */
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 /* Boxes */
@@ -148,11 +172,12 @@ header a:hover {
   background-color: #f1f1f1; /* Xám nhạt */
   border-radius: 5px; /* Bo góc */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
-  transition: transform 0.3s ease; /* Hiệu ứng hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng hover */
 }
 
 #boxes .box:hover {
   transform: translateY(-5px); /* Nâng lên khi hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Bóng khi hover */
 }
 
 #boxes .box img {
@@ -171,6 +196,8 @@ aside#sidebar .quote textarea {
   width: 90%;
   padding: 5px;
   border-radius: 5px; /* Bo góc */
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
 }
 
 /* Main-col */
@@ -188,6 +215,11 @@ ul#services li {
   background: #f1f1f1; /* Xám nhạt */
   border-radius: 5px; /* Bo góc */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng */
+  transition: box-shadow 0.3s ease; /* Hiệu ứng hover */
+}
+
+ul#services li:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Bóng khi hover */
 }
 
 footer {
@@ -197,4 +229,6 @@ footer {
   background-color: #ffd700; /* Vàng */
   text-align: center;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Bóng trên */
+  position: relative;
+  z-index: 1; /* Đưa lên trên */
 }
