@@ -2,7 +2,7 @@ body {
   font: 15px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #f4f8ff;
+  background-color: #f0f8ff;
 }
 
 /* Global */
@@ -19,59 +19,49 @@ ul {
 
 .button_1 {
   height: 38px;
-  background: #1e90ff; /* Xanh dương */
+  background: #0077cc;
   border: 0;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
   color: #fff;
   border-radius: 5px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(30,144,255,0.10);
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .button_1:hover {
-  background: #ffd700; /* Vàng */
-  color: #1e90ff;
-  box-shadow: 0 4px 16px rgba(30,144,255,0.18);
+  background: #005fa3;
 }
 
 .dark {
   padding: 15px;
-  background: #1e2a40;
-  color: #fff;
+  background: #004080;
+  color: #ffcc00;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(30,144,255,0.07);
+  border-radius: 10px;
 }
 
 /* Header */
 header {
-  background: #1e90ff;
-  color: #fff;
+  background: #004080;
+  color: #ffffff;
   padding-top: 30px;
   min-height: 70px;
-  border-bottom: #ffd700 3px solid;
-  box-shadow: 0 2px 10px rgba(30,144,255,0.08);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  border-bottom: #ffcc00 4px solid;
 }
 
 header a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  transition: color 0.2s, text-shadow 0.2s;
+  transition: color 0.3s ease;
 }
 
 header li {
   float: left;
   display: inline;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
 }
 
 header #branding {
@@ -80,7 +70,6 @@ header #branding {
 
 header #branding h1 {
   margin: 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.12);
 }
 
 header nav {
@@ -90,71 +79,56 @@ header nav {
 
 header .highlight,
 header .current a {
-  color: #ffd700;
+  color: #ffcc00;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.22);
 }
 
 header a:hover {
-  color: #ffd700;
-  text-shadow: 0 2px 6px rgba(30,144,255,0.2);
+  color: #a3d1ff;
+  font-weight: bold;
 }
 
 /* Showcase */
 #showcase {
   min-height: 400px;
-  position: relative;
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
   text-align: center;
-  color: #fff;
-  padding-top: 100px;
-  background: url('../img/showcase.jpg') no-repeat center center;
-  background-size: cover;
-  border-radius: 0 0 18px 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(30,144,255,0.13);
-}
-#showcase::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  /* Overlay xanh dương-vàng gradient */
-  background: linear-gradient(120deg, rgba(30,144,255,0.73) 55%, rgba(255,215,0,0.36) 100%);
-  z-index: 1;
-}
-#showcase .container {
+  color: #ffffff;
   position: relative;
-  z-index: 2;
-}
-#showcase h1 {
-  font-size: 55px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-shadow: 2px 2px 16px rgba(30, 144, 255, 0.28), 0 2px 12px rgba(0,0,0,0.16);
-  animation: fadeIn 1s ease;
-}
-#showcase p {
-  font-size: 20px;
-  text-shadow: 1px 1px 8px rgba(30, 144, 255, 0.18), 0 2px 8px rgba(0,0,0,0.15);
-  animation: fadeIn 1.5s ease;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(20px);}
-  100% { opacity: 1; transform: translateY(0);}
+#showcase::after {
+  content: '';
+  background: rgba(0, 0, 80, 0.6);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+
+#showcase .container {
+  position: relative;
+  z-index: 1;
+}
+
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
 }
 
 /* Newsletter */
 #newsletter {
   padding: 15px;
-  color: #fff;
-  background: #1e90ff;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 2px 8px rgba(30,144,255,0.09);
+  color: #ffffff;
+  background: #004080;
 }
 
 #newsletter h1 {
   float: left;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.13);
 }
 
 #newsletter form {
@@ -167,49 +141,32 @@ header a:hover {
   height: 25px;
   width: 250px;
   border-radius: 5px;
-  border: none;
-  box-shadow: 0 2px 6px rgba(30,144,255,0.08);
+  border: 1px solid #ccc;
 }
 
-/* Boxes - nằm ngang và responsive */
+/* Boxes */
 #boxes {
   margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 2%;
 }
 
 #boxes .box {
-  width: 32%;
-  padding: 20px;
-  background-color: #f9fbff;
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #cce6ff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(30,144,255,0.06);
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 1px solid #e3eaf7;
-  display: flex;
-  align-items: flex-start;
-  gap: 18px;
-}
-#boxes .box:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(30,144,255,0.17);
-  border-color: #ffd700;
-}
-#boxes .box img {
-  width: 90px;
-  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-/* Responsive cho boxes */
-@media (max-width: 900px) {
-  #boxes {
-    flex-direction: column;
-    gap: 20px;
-  }
-  #boxes .box {
-    width: 100%;
-  }
+#boxes .box:hover {
+  transform: translateY(-5px);
+}
+
+#boxes .box img {
+  width: 90px;
 }
 
 /* Sidebar */
@@ -223,9 +180,9 @@ aside#sidebar .quote input,
 aside#sidebar .quote textarea {
   width: 90%;
   padding: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  border: none;
-  box-shadow: 0 2px 5px rgba(30,144,255,0.07);
+  border: 1px solid #ccc;
 }
 
 /* Main-col */
@@ -234,29 +191,11 @@ article#main-col {
   width: 65%;
 }
 
-/* Services */
-ul#services li {
-  list-style: none;
-  padding: 20px;
-  border: #e3eaf7 solid 1px;
-  margin-bottom: 5px;
-  background: #f1f8ff;
-  border-radius: 7px;
-  box-shadow: 0 2px 8px rgba(30,144,255,0.05);
-  transition: box-shadow 0.3s, border-color 0.3s;
-}
-ul#services li:hover {
-  box-shadow: 0 5px 16px rgba(30,144,255,0.16);
-  border-color: #ffd700;
-}
-
 footer {
   padding: 20px;
   margin-top: 20px;
-  color: #1e2a40;
-  background-color: #ffd700;
+  color: #ffffff;
+  background-color: #0077cc;
   text-align: center;
-  font-weight: bold;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 -2px 8px rgba(30,144,255,0.07);
 }
+      
