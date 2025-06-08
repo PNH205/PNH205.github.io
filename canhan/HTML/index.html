@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Encyclopedia - A Dictionary for Programmers</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">
+                <i class="fas fa-code"></i>
+                Dev Encyclopedia
+            </h1>
+            <p class="subtitle">A Dictionary for Programmers</p>
+            
+            <nav class="nav-buttons">
+                <button class="nav-btn" data-page="about">
+                    <i class="fas fa-info-circle"></i> About
+                </button>
+                <button class="nav-btn" data-page="learn-html">
+                    <i class="fab fa-html5"></i> Learn HTML
+                </button>
+                <button class="nav-btn" data-page="learn-css">
+                    <i class="fab fa-css3-alt"></i> Learn CSS
+                </button>
+                <button class="nav-btn" data-page="learn-js">
+                    <i class="fab fa-js-square"></i> Learn JavaScript
+                </button>
+                <button class="nav-btn theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i> Light Mode
+                </button>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!-- Home Content -->
+            <div id="homeContent" class="content-container">
+                <div class="search-section">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search programming terms..." class="search-input">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <select id="categorySelect" class="category-select">
+                        <option value="">All Categories</option>
+                        <option value="ai">AI</option>
+                        <option value="apis">APIs</option>
+                        <option value="backend">Backend</option>
+                        <option value="frontend">Frontend</option>
+                        <option value="database">Database</option>
+                        <option value="devops">DevOps</option>
+                        <option value="security">Security</option>
+                        <option value="cloud">Cloud</option>
+                    </select>
+                </div>
+
+                <div id="cardsGrid" class="cards-grid">
+                    <!-- Sample cards for demonstration -->
+                    <div class="card" data-category="frontend">
+                        <h3>HTML</h3>
+                        <p>HyperText Markup Language - the standard markup language for creating web pages.</p>
+                    </div>
+                    <div class="card" data-category="frontend">
+                        <h3>CSS</h3>
+                        <p>Cascading Style Sheets - used for describing the presentation of a document written in HTML.</p>
+                    </div>
+                    <div class="card" data-category="frontend">
+                        <h3>JavaScript</h3>
+                        <p>A programming language that enables interactive web pages and is an essential part of web applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div id="aboutContent" class="content-container" style="display: none;">
+                <div class="page-title">
+                    <i class="fas fa-info-circle"></i>
+                    <h2>About Dev Encyclopedia</h2>
+                </div>
+                
+                <div class="about-section">
+                    <h3>Our Mission</h3>
+                    <p>Dev Encyclopedia is a comprehensive dictionary designed specifically for programmers and developers. Our goal is to provide clear, concise explanations of programming terms, concepts, and technologies in one easily accessible place.</p>
+                </div>
+
+                <div class="about-section">
+                    <h3>What You'll Find Here</h3>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Programming terminology and definitions</li>
+                        <li><i class="fas fa-check"></i> Technology explanations</li>
+                        <li><i class="fas fa-check"></i> Development concepts</li>
+                        <li><i class="fas fa-check"></i> Interactive learning resources</li>
+                        <li><i class="fas fa-check"></i> Regular updates and new content</li>
+                    </ul>
+                </div>
+
+                <div class="about-section">
+                    <h3>Learning Resources</h3>
+                    <p>In addition to our dictionary, we provide structured learning paths for:</p>
+                    <div class="learning-paths">
+                        <div class="path-card">
+                            <i class="fab fa-html5"></i>
+                            <h4>HTML</h4>
+                            <p>Learn the foundation of web development</p>
+                        </div>
+                        <div class="path-card">
+                            <i class="fab fa-css3-alt"></i>
+                            <h4>CSS</h4>
+                            <p>Master styling and layout techniques</p>
+                        </div>
+                        <div class="path-card">
+                            <i class="fab fa-js-square"></i>
+                            <h4>JavaScript</h4>
+                            <p>Build interactive web applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learn HTML Content -->
+            <div id="learnHtmlContent" class="content-container" style="display: none;">
+                <div class="page-title">
+                    <i class="fab fa-html5"></i>
+                    <h2>Learn HTML</h2>
+                </div>
+                
+                <div class="intro-text">
+                    <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. Learn the fundamentals and advanced concepts step by step.</p>
+                </div>
+
+                <div class="learning-modules">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>1. HTML Basics</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Learn the fundamental structure of HTML documents, basic tags, and how to create your first web page.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">Document Structure</span>
+                                <span class="topic-tag">Basic Tags</span>
+                                <span class="topic-tag">Text Formatting</span>
+                                <span class="topic-tag">Comments</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to HTML!&lt;/h1&gt;
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('html-basics')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-link"></i>
+                            <h3>2. Links and Navigation</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Master creating links, navigation menus, and connecting different pages together.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">Anchor Tags</span>
+                                <span class="topic-tag">Internal Links</span>
+                                <span class="topic-tag">External Links</span>
+                                <span class="topic-tag">Navigation</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://example.com"&gt;External&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('html-links')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-text">0% Complete - Keep learning!</p>
+                </div>
+            </div>
+
+            <!-- Learn CSS Content -->
+            <div id="learnCssContent" class="content-container" style="display: none;">
+                <div class="page-title">
+                    <i class="fab fa-css3-alt"></i>
+                    <h2>Learn CSS</h2>
+                </div>
+                
+                <div class="intro-text">
+                    <p>CSS (Cascading Style Sheets) is used to style and layout web pages. Master the art of making beautiful, responsive websites.</p>
+                </div>
+
+                <div class="learning-modules">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-palette"></i>
+                            <h3>1. CSS Fundamentals</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Learn CSS syntax, selectors, and basic styling properties to transform your HTML.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">Selectors</span>
+                                <span class="topic-tag">Properties</span>
+                                <span class="topic-tag">Colors</span>
+                                <span class="topic-tag">Typography</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>/* CSS Basics */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 10px;
+}</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('css-basics')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-th-large"></i>
+                            <h3>2. Layout & Positioning</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Master CSS layout techniques including Flexbox, Grid, and positioning.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">Flexbox</span>
+                                <span class="topic-tag">Grid</span>
+                                <span class="topic-tag">Positioning</span>
+                                <span class="topic-tag">Float</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>/* Flexbox Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('css-layout')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-text">0% Complete - Start your CSS journey!</p>
+                </div>
+            </div>
+
+            <!-- Learn JavaScript Content -->
+            <div id="learnJsContent" class="content-container" style="display: none;">
+                <div class="page-title">
+                    <i class="fab fa-js-square"></i>
+                    <h2>Learn JavaScript</h2>
+                </div>
+                
+                <div class="intro-text">
+                    <p>JavaScript brings interactivity to web pages. Learn programming fundamentals and advanced concepts to build dynamic applications.</p>
+                </div>
+
+                <div class="learning-modules">
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-code"></i>
+                            <h3>1. JavaScript Basics</h3>
+                            <span class="difficulty beginner">Beginner</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Learn variables, data types, functions, and control structures in JavaScript.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">Variables</span>
+                                <span class="topic-tag">Functions</span>
+                                <span class="topic-tag">Loops</span>
+                                <span class="topic-tag">Conditions</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>// JavaScript Basics
+let greeting = "Hello, World!";
+console.log(greeting);
+
+function addNumbers(a, b) {
+    return a + b;
+}
+
+let result = addNumbers(5, 3);</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('js-basics')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="module-card">
+                        <div class="module-header">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <h3>2. DOM Manipulation</h3>
+                            <span class="difficulty intermediate">Intermediate</span>
+                        </div>
+                        <div class="module-content">
+                            <p>Learn to interact with HTML elements, handle events, and create dynamic web pages.</p>
+                            <div class="topics-list">
+                                <span class="topic-tag">DOM Selection</span>
+                                <span class="topic-tag">Event Handling</span>
+                                <span class="topic-tag">Element Creation</span>
+                                <span class="topic-tag">Style Manipulation</span>
+                            </div>
+                            <div class="code-example">
+                                <h4>Example:</h4>
+                                <pre><code>// DOM Manipulation
+const button = document.getElementById('myButton');
+button.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'lightblue';
+});</code></pre>
+                            </div>
+                            <button class="module-btn" onclick="startModule('js-dom')">
+                                <i class="fas fa-rocket"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progress-section">
+                    <h3>Your Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-text">0% Complete - Begin your JavaScript adventure!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Learning Modal -->
+    <div id="learningModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Module Title</h2>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="modalContent">
+                    <!-- Module content will be loaded here -->
+                </div>
+                <div class="modal-actions">
+                    <button id="prevBtn" class="btn-secondary">Previous</button>
+                    <button id="nextBtn" class="btn-primary">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
